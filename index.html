@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bubble Selection Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="game-container">
+    <h1>Bubble  Game</h1>
+
+    <div class="game-info">
+        <div>Hit: <span id="hitNumber">-</span></div>
+        <div>Time: <span id="timer">60</span>s</div>
+        <div>Score: <span id="score">0</span></div>
+    </div>
+
+    <div id="bubbleArea" class="bubble-area"></div>
+
+    <div id="gameOver" class="game-over hidden">
+        <h2 id="gameMessage"></h2>
+        <p>Your Score: <span id="finalScore">0</span></p>
+        <button onclick="startGame()">Start New Game</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

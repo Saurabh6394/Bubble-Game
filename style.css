@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.game-container {
+    background: #fff;
+    width: 100%;
+    max-width: 950px;
+    border-radius: 14px;
+    padding: 15px;
+    text-align: center;
+}
+
+h1 {
+    font-size: clamp(20px, 4vw, 28px);
+    margin-bottom: 12px;
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: clamp(14px, 3vw, 18px);
+}
+
+.bubble-area {
+    flex-grow: 1;
+    min-height: 60vh;   /* 👈 fills most of screen */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(55px, 1fr));
+    gap: 12px;
+}
+
+.bubble {
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #4caf50;
+    color: #fff;
+    font-size: clamp(16px, 4vw, 22px);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.15s, background 0.15s;
+}
+
+.bubble:active {
+    transform: scale(0.95);
+}
+
+.game-over {
+    margin-top: 20px;
+}
+
+.game-over h2 {
+    font-size: clamp(20px, 4vw, 26px);
+    margin-bottom: 8px;
+}
+
+.game-over h2.wrong {
+    color: #e53935;
+}
+
+.game-over h2.timeout {
+    color: #3949ab;
+}
+
+.game-over button {
+    margin-top: 10px;
+    padding: 12px 24px;
+    font-size: clamp(14px, 3vw, 18px);
+    border: none;
+    background: #667eea;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
